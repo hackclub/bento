@@ -259,6 +259,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   align-content: start;
+  align-items: start;
   background: linear-gradient(to bottom, #f7e0b6, #ffffff);
 }
 
@@ -274,6 +275,12 @@ body {
   border-radius: 8px;
   background: #ffedcb;
   padding: 20px;
+  box-sizing: border-box;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+#faq details[open] {
+  background: #fff6e3;
 }
 
 #faq summary {
@@ -284,6 +291,16 @@ body {
   color: #005248;
 }
 
+#faq summary:hover {
+  color: #00332c;
+}
+
+#faq summary:focus-visible {
+  outline: 2px solid #005248;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 #faq summary::-webkit-details-marker {
   display: none;
 }
@@ -292,6 +309,8 @@ body {
   content: "+";
   margin-right: 8px;
   color: #005248;
+  display: inline-block;
+  width: 1ch;
 }
 
 #faq details[open] summary::before {
