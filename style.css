@@ -28,6 +28,19 @@ body {
   width: 20%;
 }
 
+.slack-link {
+  display: inline-block;
+  color: inherit;
+  font-weight: 600;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.slack-link:hover,
+.slack-link:focus-visible {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -49,6 +62,11 @@ body {
 .button:hover {
   background: #f5ddab;
   border-color: #3f2e0b;
+}
+
+.button:focus-visible {
+  outline: 2px solid #3f2e0b;
+  outline-offset: 3px;
 }
 
 .button-disabled {
@@ -159,9 +177,6 @@ body {
 
 .card-icon {
   color: #005248;
-}
-
-.card-icon {
   width: 64px;
   height: 64px;
   stroke-width: 1.5;
@@ -177,6 +192,7 @@ body {
   font-size: 18px;
   color: #005248;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .checklist input[type="checkbox"] {
