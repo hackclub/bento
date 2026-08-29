@@ -1,0 +1,7 @@
+{
+  "name": "bento",
+  "private": true,
+  "dependencies": {
+    "@jeremy46231/ferry": "latest"
+  }
+}
