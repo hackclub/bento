@@ -1,6 +1,7 @@
 {
   "redirects": [
     { "source": "/submit", "destination": "/api/submit/start" },
-    { "source": "/api/submit", "destination": "/api/submit/start" }
+    { "source": "/api/submit", "destination": "/api/submit/start" },
+    { "source": "/review", "destination": "https://airtable.com/appFDKY1ul0KPnpBk/pagc7MPGFgtTW0DSq" }
   ]
 }
