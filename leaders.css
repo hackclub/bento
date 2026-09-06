@@ -10,44 +10,34 @@ body {
 #top {
   padding: 20px;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*  align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
+  border-bottom: 2px solid black;
   background: linear-gradient(to top, #f7e0b6, #d29723);
 }
 
 #top > img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
+  width: 15%;
+  align-self: flex-end;
 }
 
-.slack-link {
-  display: inline-block;
-  color: inherit;
-  font-weight: 600;
-  transition:
-    transform 150ms ease,
-    opacity 150ms ease;
-}
-
-.slack-link:hover,
-.slack-link:focus-visible {
-  opacity: 0.75;
-  transform: scale(1.1);
+#top h1,
+p {
+  text-align: center;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -69,14 +59,6 @@ body {
 .button:focus-visible {
   outline: 2px solid #3f2e0b;
   outline-offset: 3px;
-}
-
-.button-disabled {
-  background: #d9d9d9;
-  border-color: #a6a6a6;
-  color: #808080;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .brand-banner {
