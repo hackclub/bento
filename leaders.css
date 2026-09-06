@@ -1,0 +1,450 @@
+body {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+}
+
+#top {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to top, #f7e0b6, #d29723);
+}
+
+#top > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.slack-link {
+  display: inline-block;
+  color: inherit;
+  font-weight: 600;
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease;
+}
+
+.slack-link:hover,
+.slack-link:focus-visible {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.button {
+  border: 3px solid #5a4310;
+  background: #ffedcb;
+  color: #5a4310;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f5ddab;
+  border-color: #3f2e0b;
+}
+
+.button:focus-visible {
+  outline: 2px solid #3f2e0b;
+  outline-offset: 3px;
+}
+
+.button-disabled {
+  background: #d9d9d9;
+  border-color: #a6a6a6;
+  color: #808080;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.brand-banner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  border: 0;
+  width: 256px;
+  z-index: 999;
+}
+
+.brand-banner img {
+  width: 100%;
+  height: auto;
+  transition: transform 180ms ease;
+  transform-origin: top left;
+}
+
+.brand-banner:hover img {
+  transform: rotate(-4deg) scale(1.02);
+}
+
+#requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-content: start;
+  background: linear-gradient(to bottom, #f7e0b6, #ffffff);
+}
+
+#requirements > h1 {
+  font-size: 46px;
+  margin: 0;
+  grid-column: 1 / -1;
+  color: #5a4310;
+}
+
+.requirements-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.requirements-col-left .bento-card-checklist {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bento-card-primary,
+.bento-card-secondary {
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #005248;
+  background: #ffd98e;
+}
+
+.bento-card-primary {
+  background: #ffd98e;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bento-card-secondary {
+  background: #cfead1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bento-card-secondary:last-child {
+  background: #ffd4cf;
+}
+
+.bento-card-checklist {
+  background: #e9dbf3;
+}
+
+.bento-card-primary h1,
+.bento-card-secondary h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #005248;
+}
+
+.bento-card-primary p,
+.bento-card-secondary p {
+  margin: 12px 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #005248;
+}
+
+.card-icon {
+  color: #005248;
+  width: 64px;
+  height: 64px;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.checklist {
+  margin-top: 0;
+}
+
+.checklist label {
+  display: block;
+  font-size: 18px;
+  color: #005248;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #005248;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+#bonuses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-content: start;
+  background: linear-gradient(to bottom, #ffffff, #4a148c);
+  border-bottom: 3px solid #ffedcb;
+}
+
+#bonuses > h1 {
+  font-size: 46px;
+  margin: 0;
+  grid-column: 1 / -1;
+  justify-self: end;
+  color: #4a148c;
+}
+
+.bonus-card {
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #4a148c;
+  background: #ffedcb;
+}
+
+.bonus-card h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #4a148c;
+  text-align: center;
+}
+
+.bonus-card img {
+  display: block;
+  margin: 20px auto;
+  width: 40%;
+  height: auto;
+}
+
+.bonus-card p {
+  margin: 12px 0 0;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #4a148c;
+}
+
+.bonus-card svg {
+  display: block;
+  margin: 20px auto;
+  width: calc(40% * 0.5246);
+  height: auto;
+  color: #4a148c;
+}
+
+.bonus-card a {
+  color: #4a148c;
+  text-decoration: underline;
+}
+
+#faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-content: start;
+  align-items: start;
+  background: linear-gradient(to bottom, #f7e0b6, #ffffff);
+}
+
+#faq > h1 {
+  grid-column: 1 / -1;
+  font-size: 46px;
+  margin: 0;
+  color: #5a4310;
+}
+
+#faq details {
+  border: 3px solid #005248;
+  border-radius: 8px;
+  background: #ffedcb;
+  padding: 20px;
+  box-sizing: border-box;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+#faq details[open] {
+  background: #fff6e3;
+}
+
+#faq summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: #005248;
+}
+
+#faq summary:hover {
+  color: #00332c;
+}
+
+#faq summary:focus-visible {
+  outline: 2px solid #005248;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+#faq summary::-webkit-details-marker {
+  display: none;
+}
+
+#faq summary::before {
+  content: "+";
+  margin-right: 8px;
+  color: #005248;
+  display: inline-block;
+  width: 1ch;
+}
+
+#faq details[open] summary::before {
+  content: "\2212"; /* ai says this is unicode for a minus sign, im not insane */
+}
+
+#faq p {
+  margin: 12px 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #005248;
+}
+
+footer {
+  border-top: 2px solid #d29723;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d29723;
+}
+
+@media (max-width: 768px) {
+  #top {
+    min-height: 100vh;
+    height: auto;
+    padding: 60px 20px 40px;
+  }
+
+  #top > img {
+    width: 55%;
+  }
+
+  #top h3 {
+    font-size: 16px;
+  }
+
+  #top p {
+    font-size: 14px;
+  }
+
+  .brand-banner {
+    width: 160px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  #requirements,
+  #bonuses,
+  #faq {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+    min-height: auto;
+  }
+
+  #requirements > h1,
+  #bonuses > h1,
+  #faq > h1 {
+    font-size: 34px;
+  }
+
+  #bonuses > h1 {
+    justify-self: start;
+  }
+
+  .bento-card-primary h1,
+  .bento-card-secondary h1 {
+    font-size: 28px;
+  }
+
+  .bento-card-primary p,
+  .bento-card-secondary p {
+    font-size: 16px;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .checklist label {
+    font-size: 16px;
+  }
+
+  .bonus-card h1 {
+    font-size: 30px;
+  }
+
+  .bonus-card p {
+    font-size: 16px;
+  }
+
+  .bonus-card img {
+    width: 60%;
+  }
+
+  .bonus-card svg {
+    width: 30%;
+  }
+
+  #faq summary,
+  #faq p {
+    font-size: 16px;
+  }
+}
