@@ -203,6 +203,23 @@ body {
   vertical-align: middle;
 }
 
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.leaders-pointer {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #5a4310;
+}
+
+.leaders-pointer a {
+  color: #005248;
+  font-weight: 600;
+}
+
 #bonuses {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -264,6 +281,54 @@ body {
 .bonus-card a {
   color: #4a148c;
   text-decoration: underline;
+}
+
+#prizes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-content: start;
+  background: linear-gradient(to bottom, #4a148c, #ffffff);
+}
+
+#prizes > h1 {
+  font-size: 46px;
+  margin: 0;
+  grid-column: 1 / -1;
+  color: #4a148c;
+}
+
+.prize-card {
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #4a148c;
+  background: #ffedcb;
+  text-align: center;
+}
+
+.prize-card h2 {
+  font-size: 28px;
+  margin: 12px 0 0;
+  color: #4a148c;
+}
+
+.prize-card p {
+  margin: 12px 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #4a148c;
+}
+
+.prize-image {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
 }
 
 #faq {
@@ -387,6 +452,7 @@ footer a {
 
   #requirements,
   #bonuses,
+  #prizes,
   #faq {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -396,6 +462,7 @@ footer a {
 
   #requirements > h1,
   #bonuses > h1,
+  #prizes > h1,
   #faq > h1 {
     font-size: 34px;
   }
@@ -437,6 +504,18 @@ footer a {
 
   .bonus-card svg {
     width: 30%;
+  }
+
+  .prize-card h2 {
+    font-size: 22px;
+  }
+
+  .prize-card p {
+    font-size: 16px;
+  }
+
+  .prize-image {
+    width: 60%;
   }
 
   #faq summary,
