@@ -15,9 +15,9 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  /*  align-items: center;
+  align-items: center;
   justify-content: center;
-  text-align: center; */
+  text-align: center;
   border-bottom: 2px solid black;
   background: linear-gradient(to top, #f7e0b6, #d29723);
 }
@@ -25,11 +25,10 @@ body {
 #top > img {
   display: block;
   width: 15%;
-  align-self: flex-end;
 }
 
 #top h1,
-p {
+#top p {
   text-align: center;
 }
 
@@ -82,6 +81,17 @@ p {
   transform: rotate(-4deg) scale(1.02);
 }
 
+#guide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  align-content: start;
+  background: #f7e0b6;
+}
+
 #requirements {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -92,6 +102,10 @@ p {
   box-sizing: border-box;
   align-content: start;
   background: linear-gradient(to bottom, #f7e0b6, #ffffff);
+}
+
+.full-width {
+  grid-column: 1 / -1;
 }
 
 #requirements > h1 {
@@ -371,6 +385,7 @@ footer a {
     font-size: 15px;
   }
 
+  #guide,
   #requirements,
   #bonuses,
   #faq {
