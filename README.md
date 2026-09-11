@@ -1,4 +1,4 @@
-![](/bento-ysws-logo.png)
+![](/assets/bento-ysws-logo.png)
 
 # bento
 
