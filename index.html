@@ -67,6 +67,12 @@
         >
           Individual Submissions
         </button>
+        <button
+          class="button"
+          onclick="window.location.href = 'example.html'"
+        >
+          Example Projects
+        </button>
       </div>
     </section>
     <section id="requirements">
@@ -237,6 +243,34 @@
 
     <!-- ahhhhhh i need space please-->
 
+    <section id="countdown">
+      <div class="countdown-card">
+        <h2>Bento Ends</h2>
+        <p class="countdown-end-time">14 October 2026, 12:00 PM BST</p>
+        <div class="countdown-timer" id="countdown-timer">
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-days">0</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-hours">0</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-mins">0</span>
+            <span class="countdown-label">Mins</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-secs">0</span>
+            <span class="countdown-label">Secs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="bonuses">
       <h1>Bonus Features</h1>
       <div class="bonus-card full-width">
@@ -361,5 +395,54 @@
       </p>
     </footer>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      ;(function () {
+        // 14 Oct 2026 12:00 PM BST = 2026-10-14T11:00:00Z
+        const END = new Date('2026-10-14T11:00:00Z').getTime()
+
+        const $d = document.getElementById('cd-days')
+        const $h = document.getElementById('cd-hours')
+        const $m = document.getElementById('cd-mins')
+        const $s = document.getElementById('cd-secs')
+        const $timer = document.getElementById('countdown-timer')
+        const $card = $timer?.closest('.countdown-card')
+
+        function tick() {
+          const now = Date.now()
+          let diff = END - now
+
+          if (diff <= 0) {
+            $d.textContent = '0'
+            $h.textContent = '0'
+            $m.textContent = '0'
+            $s.textContent = '0'
+            if ($card) {
+              $timer.style.display = 'none'
+              const msg = document.createElement('p')
+              msg.className = 'countdown-ended'
+              msg.textContent = 'Bento has ended!'
+              $card.appendChild(msg)
+            }
+            return
+          }
+
+          const days = Math.floor(diff / 86400000)
+          diff %= 86400000
+          const hours = Math.floor(diff / 3600000)
+          diff %= 3600000
+          const mins = Math.floor(diff / 60000)
+          diff %= 60000
+          const secs = Math.floor(diff / 1000)
+
+          $d.textContent = days
+          $h.textContent = String(hours).padStart(2, '0')
+          $m.textContent = String(mins).padStart(2, '0')
+          $s.textContent = String(secs).padStart(2, '0')
+        }
+
+        tick()
+        setInterval(tick, 1000)
+      })()
+    </script>
   </body>
 </html>

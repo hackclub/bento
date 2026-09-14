@@ -416,6 +416,81 @@ footer a {
   color: #d29723;
 }
 
+#countdown {
+  padding: 40px;
+  background: #ffffff;
+}
+
+.countdown-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  border-radius: 8px;
+  border: 3px solid #5a4310;
+  background: #ffedcb;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.countdown-card h2 {
+  font-size: 32px;
+  margin: 0;
+  color: #5a4310;
+}
+
+.countdown-end-time {
+  margin: 8px 0 20px;
+  font-size: 16px;
+  color: #5a4310;
+  opacity: 0.8;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.countdown-value {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  color: #005248;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #005248;
+  margin-top: 4px;
+}
+
+.countdown-separator {
+  font-size: 48px;
+  font-weight: 700;
+  color: #005248;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.countdown-ended {
+  font-size: 24px;
+  font-weight: 700;
+  color: #005248;
+  margin: 16px 0 0;
+}
+
 @media (max-width: 768px) {
   #top {
     min-height: 100vh;
@@ -521,5 +596,26 @@ footer a {
   #faq summary,
   #faq p {
     font-size: 16px;
+  }
+
+  #countdown {
+    padding: 24px;
+  }
+
+  .countdown-card h2 {
+    font-size: 24px;
+  }
+
+  .countdown-value {
+    font-size: 32px;
+  }
+
+  .countdown-separator {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+
+  .countdown-unit {
+    min-width: 48px;
   }
 }
