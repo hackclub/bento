@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leaders Zone - Bento</title>
     <link rel="icon" type="image/png" href="assets/bento-bot-logo-512x512.png" />
@@ -36,13 +37,19 @@
           class="button"
           onclick="window.location.href = 'https://clubs.hackclub.com/workshops'"
         >
-          Open + View Your Workshop
+          Create a Workshop
         </button>
         <button
           class="button"
-          onclick="window.location.href = 'index.html'"
+          onclick="window.location.href = '/'"
         >
           Back to Home
+        </button>
+        <button
+          class="button"
+          onclick="window.location.href = 'example.html'"
+        >
+          Example Projects
         </button>
       </div>
     </section>
@@ -53,8 +60,11 @@
       </div>
       <div id="leaders-content">
         <h3>Presentation + Guide!</h3>
-        <p>Below is a button to our canva slideshow which you can copy and edit, or use as is with your club!</p>
-        <button class="button" onclick="window.location.href = 'https://canva.com/'">Click here </button>
+        <p>Below is a button to our canva slideshow and google doc which you can copy and edit, or use as is with your club!</p>
+        <div class="buttons">
+          <button class="button" onclick="window.location.href = 'https://canva.link/bento-workshop'">Slideshow</button>
+          <button class="button" onclick="window.location.href = 'https://docs.google.com/document/d/15oz3jA-uNTz-W8jdnuxxMZ6a9p7TJTDhOCJERevW8x4/edit?usp=sharing'">Document</button>
+        </div>
       </div>
     </section>
     <section id="requirements">
@@ -132,8 +142,7 @@
               Like before, you have creative freedom here! It could be as
               simple as a welcome message with a button to open the rest of
               the project, or it could be more complex, with a logo on the
-              page (more about logos later), some featured content, and for
-              more experienced programmers, a login / signup screen!
+              page (more about logos later).
             </p>
           </div>
           <svg
@@ -218,7 +227,7 @@
         <p>
           For this - you need to make some content for your project! Again,
           this is completely optional, but if you do make some content, you
-          can get extra rewards!
+          can get extra coins!
         </p>
         <p>
           <strong
@@ -239,11 +248,6 @@
           - and anything else you can think of! Content can also be
           <strong>extra features</strong>, like using JavaScript to animate
           your site, or adding extra pages!
-        </p>
-        <p>
-          The content can't be filler content! It needs to be quality
-          content at a minimum, and your main effort must go into your
-          coding project.
         </p>
         <p>
           Hackatime is <strong>required</strong>, even though it's optional
@@ -275,6 +279,10 @@
           freedom. But we also want to make sure your logo doesn't take too
           long to make and clearly represents
           <strong>what your project does</strong>!
+        </p>
+        <p>
+          You should either host the image on Hack Club CDN or upload it to
+          the repo's <code>assets</code> folder!
         </p>
       </div>
     </section>

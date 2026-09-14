@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bento</title>
     <link rel="icon" type="image/png" href="assets/bento-bot-logo-512x512.png" />
@@ -32,7 +33,7 @@
         <strong>Lid</strong>, <strong>Chopsticks</strong>, and
         <strong>Dividers</strong> and <i>we ship</i> sushi!
         <br>
-        <small>Optionally, make a logo for bonus prizes</small>
+        <small>Optionally, make a logo for a bonus!</small>
       </h3>
       <p>Created by Jacob, Freddie and <strong>Sponsored by Jared</strong>!</p>
       <p>
@@ -61,10 +62,16 @@
           Create a Club Workshop
         </button>
         <button
-          class="button button-disabled"
+          class="button"
           onclick="window.location.href = '/submit'"
         >
-          Individual Submissions - <strong>Coming soon!</strong>
+          Individual Submissions
+        </button>
+        <button
+          class="button"
+          onclick="window.location.href = 'example.html'"
+        >
+          Example Projects
         </button>
       </div>
     </section>
@@ -236,6 +243,34 @@
 
     <!-- ahhhhhh i need space please-->
 
+    <section id="countdown">
+      <div class="countdown-card">
+        <h2>Bento Ends</h2>
+        <p class="countdown-end-time">14 October 2026, 12:00 PM EST</p>
+        <div class="countdown-timer" id="countdown-timer">
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-days">0</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-hours">0</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-mins">0</span>
+            <span class="countdown-label">Mins</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-secs">0</span>
+            <span class="countdown-label">Secs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="bonuses">
       <h1>Bonus Features</h1>
       <div class="bonus-card full-width">
@@ -260,12 +295,12 @@
         <p>
           Like before - but especially here - we want you to have creative
           freedom. But we also want to make sure your logo doesn't take too
-          long to make and clearly represents
-          <strong>what your project does</strong>!
+          long to make and represents
+          <strong>what your project is</strong>!
         </p>
         <p>
           <strong>You must Lapse-record your design work</strong> for the
-          logo so reviewers can verify it's original.
+          logo so reviewers can verify it's original. Please <strong>do not</strong> sync your timelapse to Hackatime. It may cause your logo time to not be counted.
         </p>
         <p>
           Art/design time is capped at
@@ -318,7 +353,7 @@
         <summary>Do I need to Lapse-record my logo design?</summary>
         <p>
           Yes - individual submissions require a Lapse recording of your
-          logo design work so reviewers can verify it's original. Keep in
+          logo design work (if you choose to make one) so reviewers can verify it's original. Keep in
           mind art/design time is capped at 30% of your total project time,
           or 30 minutes, whichever is smaller - your Hackatime-tracked
           coding time is never capped.
@@ -329,9 +364,7 @@
         <p>
           No - you cannot use AI. If you do use AI - reviewers reserve the
           right to reject your project or deflate your payout. We want you
-          to learn and grow - AI is reserved for later on - Hack Club wants
-          you to learn, a bad website doesn't mean a rejection, it might
-          make your project be approved faster!
+          to learn and grow. A website that shows human personality is better than AI slop!
         </p>
       </details>
     </section>
@@ -362,5 +395,54 @@
       </p>
     </footer>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      ;(function () {
+        // 14 Oct 2026 12:00 PM BST = 2026-10-14T11:00:00Z
+        const END = new Date('2026-10-14T11:00:00Z').getTime()
+
+        const $d = document.getElementById('cd-days')
+        const $h = document.getElementById('cd-hours')
+        const $m = document.getElementById('cd-mins')
+        const $s = document.getElementById('cd-secs')
+        const $timer = document.getElementById('countdown-timer')
+        const $card = $timer?.closest('.countdown-card')
+
+        function tick() {
+          const now = Date.now()
+          let diff = END - now
+
+          if (diff <= 0) {
+            $d.textContent = '0'
+            $h.textContent = '0'
+            $m.textContent = '0'
+            $s.textContent = '0'
+            if ($card) {
+              $timer.style.display = 'none'
+              const msg = document.createElement('p')
+              msg.className = 'countdown-ended'
+              msg.textContent = 'Bento has ended!'
+              $card.appendChild(msg)
+            }
+            return
+          }
+
+          const days = Math.floor(diff / 86400000)
+          diff %= 86400000
+          const hours = Math.floor(diff / 3600000)
+          diff %= 3600000
+          const mins = Math.floor(diff / 60000)
+          diff %= 60000
+          const secs = Math.floor(diff / 1000)
+
+          $d.textContent = days
+          $h.textContent = String(hours).padStart(2, '0')
+          $m.textContent = String(mins).padStart(2, '0')
+          $s.textContent = String(secs).padStart(2, '0')
+        }
+
+        tick()
+        setInterval(tick, 1000)
+      })()
+    </script>
   </body>
 </html>
