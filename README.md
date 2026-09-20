@@ -15,6 +15,17 @@ This website is hosted on Vercel and is a simple static website. It has multiple
 - A /submit route which allows individuals to submit their project. This includes `@jeremy46231/ferry` for HCA and Hackatime in submissions.
 - Buttons to the organiser's slack account, clubs workshop link, clubs presentation link, clubs document link and to the /submit route
 
+## Features of the Main Static Site
+
+- Bento Grid (ironic) to display the requirements and prizes
+- a centered logo, and waving hack club flag
+- cool style buttons across the site
+- countdown to the end of bento
+- cool footer with info about us and sponsor
+- link to out super cool slack channel
+- easy access across the site between the pages
+- consistent theme across the pages
+
 ## Credits
 
 This YSWS Idea was formed from @Jacob N, and the original design and logo was created by Jacob. 
