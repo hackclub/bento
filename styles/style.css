@@ -69,7 +69,7 @@ body {
   outline-offset: 3px;
 }
 
-.button-disabled {
+.button-home-disabled {
   background: #d9d9d9;
   border-color: #a6a6a6;
   color: #808080;
